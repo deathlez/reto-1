@@ -15,7 +15,7 @@ body{
   animation-duration: 8s;
   transition: 3s;
   background-color: hsl(257, 40%, 49%);
-  background-image: url(/images/bg-desktop.svg);
+  background-image: url(../images/bg-desktop.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,7 +146,7 @@ h1 {
 
 body {
     display: inline-block;
-    background-image: url(/images/bg-mobile.svg);
+    background-image: url(../images/bg-mobile.svg);
     background-size: cover;
     min-width: 100%;
     transition: 3s;
