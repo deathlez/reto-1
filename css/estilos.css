@@ -36,8 +36,8 @@ body{
   }
 
 @keyframes change-bg {
-    from {background-color: rgb(0, 0, 0, .5);}
-    to {background-color: hsl(257, 40%, 49%);}
+    from {background-color: hsl(257, 40%, 49%);}
+    to {background-color: rgb(0, 0, 0,);}
 }
 
 h1 {
@@ -127,7 +127,7 @@ footer a img {
 
 @media screen and (max-width: 1439px) {
   
-  @keyframes change-bg {
+/*   @keyframes change-bg {
     from {background-color: hsl(257, 40%, 49%);}
     to {background-color: rgb(0, 0, 0);}
   }
@@ -135,7 +135,7 @@ footer a img {
 body {
   transition: 3s;
 }
-
+ */
 h1 {
   font-size: 30px;
   transition: 3s;
@@ -153,7 +153,7 @@ h1 {
 
 @media screen and (max-width: 1023px) {
 
-body {
+/* body {
     display: inline-block;
     background-image: url(/images/bg-mobile.svg);
     background-size: cover;
@@ -161,7 +161,7 @@ body {
     transition: 3s;
     height: auto;
   }
-
+ */
 @keyframes change-bg {
     from {background-color: hsl(257, 40%, 49%);}
     to {background-color: rgb(0, 0, 0);}
@@ -198,7 +198,7 @@ main {
 
 .footer {
   margin-right: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   margin-top: 50px;
   display: flex;
   padding: 0;
@@ -227,7 +227,69 @@ main {
 }
 @media screen and (max-width: 480px) {
 
+/*   body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    animation-name: change-bg;
+    animation-duration: 8s;
+    transition: 3s;
+    background-color: hsl(257, 40%, 49%);
+    background-size: 100%;
+    background-position: unset;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
+    }
+ */
+  header .logo img {
+    margin-top: 40px;
+    margin-left: 63px;
+  }
+  
+  .hero-content img {
+    margin-top: 60px;
+    width: 380px;
+    }
 }
 @media screen and (min-width: 375px) {
+
+  header .logo img {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+  .hero-content img {
+    margin-top: 60px;
+    width: 300px;
+    }
+  
+    h1 {
+      font-size: 25px;
+      transition: 3s;
+  }
+
+  .content {
+    margin-top: 55px;
+}
+
+  .content p {
+    margin: 0px 18px;
+    width: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+  .content .hero-button button {
+    transition: 3s;
+    margin-top: 25px;
+    padding: 14px 80px;
+  }
+
+  .footer {
+    transition: 3s;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    padding: 0;
+  }
 
 }
