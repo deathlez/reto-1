@@ -8,157 +8,226 @@
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
 - Weights: 400 */
 
-/* Mobile First */
+/* font-family: 'Open Sans', sans-serif;
+background-color: hsl(257, 40%, 49%);
+font-family: 'Poppins', sans-serif;
+@media screen and (min-width: 370px) {
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: hsl(257, 40%, 49%);
   animation-name: change-bg;
   animation-duration: 8s;
-  background-image: url(/images/bg-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin: 0;
-/*   width: 100%;
-  height: auto; */
+  @keyframes change-bg {
+    from {background-color: hsl(257, 40%, 49%);}
+    to {background-color: rgb(0, 0, 0);}
+  } */
 
-}
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  animation-name: change-bg;
+  animation-duration: 8s;
+  transition: 3s;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(/images/bg-desktop.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  }
 
 @keyframes change-bg {
-  from {background-color: hsl(257, 40%, 49%);}
-  to {background-color: rgb(0, 0, 0);}
-}
-
-body p {
-  margin: 0 35px;
-  color: #EBEBEB;
-  text-align: center;
-  font-weight: 400;
-  font-size: 16px;
+    from {background-color: rgb(0, 0, 0, .5);}
+    to {background-color: hsl(257, 40%, 49%);}
 }
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 25px;
   font-weight: 400;
-  margin-top: 60px;
   color: white;
+  font-size: 35px;
 }
 
-header .logo {
-  margin-left: 0;
-  padding: 0;
+header .logo img {
+ /*  padding-top: 50px;
+  padding-left: 50px; */
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
-header .logo img{
-  margin-top: 10px;
-  margin-left: 40px;
-}
-.hero {
-  margin: 0;
-  text-align: center;
-}
-.hero .hero-content img {
-  margin-top: 45px;
-  padding: 0;
-  max-width: 80vw;
+main {
+  display: flex;
   width: 100%;
   height: auto;
+  justify-content: center;
+}
+
+.hero {
+  margin: 0;  
+  padding: 0;
+}
+
+.hero-content img {
+  transition: 2s;
+  margin-top: 35px;
+  margin-left: 0;
+  width: 600px;
+  height: 100%;
 }
 
 .content {
-  margin: 0;
-  text-align: center;
+  margin-top: 40px;
+  margin-left: 35px;
+  padding: 0;
+/*   justify-content: flex-end;
+  flex-wrap: wrap; */
 }
 
-.content div button {
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  padding: 12px 75px;
+.content p {
+  margin-right: 50px;
+  color: white;
+  font-size: small;
+  width: 370px;
+}
+
+.content .hero-button button{
+  margin-top: 5px;
+  padding: 12px 45px;
   border-radius: 20px;
+  color: hsl(257, 40%, 49%);
+  background-color:white;
+  cursor: pointer;
   border: none;
-  color: #876cca;
-  box-shadow: 1px 2px 1px 1px #20212447;
-  
 }
 
-.content button:hover {
-  box-shadow: 0 6px 6px 0 #20212447;
-  border-color: #dfe1e500;
-  cursor: pointer;
-  color: #b29bec;
+.content .hero-button button:hover{
+  color: hsl(257, 66%, 72%);
+  background-color:white;
+  box-shadow: 2px 3px 6px 1px hsl(259, 11%, 38%);
 }
 
 footer {
-  text-align: center;
-  margin-bottom: 50px;
+  margin-right:200px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
 }
-a {
+
+footer a {
+  padding: 2px;
   text-decoration: none;
 }
-footer .social a img{
-  max-width: 100%;
-  height: auto;
-  padding: 5px;
+
+footer a img {
+  transition: 3s;
+  width: 25px;
+  height: 25px;
 }
 
-@media screen and (min-width: 370px) {
+
+@media screen and (max-width: 1439px) {
   
-}
-
-@media screen and (min-width: 480px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  body p {
-    font-size: 1.2em;
-  }
-
-  .content div button {
-    padding: 12px 60px;
-  }
-
-}
-
-@media screen and (min-width: 767px) {
-  h1 {
-    font-size: 3em;
-  }
-
-  body p {
-    font-size: 1.8em;
-  }
-
-}
-
-@media screen and (min-width: 1024px) {
-
-  
-  h1 {
-  width: 30px;
-  display: flex;
-  margin: 0;
-  font-size: 1.5em;
-  }
-
-  body {
-    background-image: url(/images/bg-desktop.svg);
-    background-size: contain;
-    transition: .6s;
-  }
-
   @keyframes change-bg {
     from {background-color: hsl(257, 40%, 49%);}
     to {background-color: rgb(0, 0, 0);}
   }
 
+body {
+  transition: 3s;
+}
+
+h1 {
+  font-size: 30px;
+  transition: 3s;
+  }
   .hero {
-    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .content {
-    display: flex;
+    margin-top: 35px;
+    margin-left: 0;
   }
+}
+
+
+@media screen and (max-width: 1023px) {
+
+body {
+    display: inline-block;
+    background-image: url(/images/bg-mobile.svg);
+    background-size: cover;
+    min-width: 100%;
+    transition: 3s;
+    height: auto;
+  }
+
+@keyframes change-bg {
+    from {background-color: hsl(257, 40%, 49%);}
+    to {background-color: rgb(0, 0, 0);}
+  }
+
+main {
+  transition: 3s;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  margin: 0;
+}
+
+.hero-content img {
+  margin-top: 20px;
+  width: 400px;
+}
+
+.content p{
+  margin: 0;
+  width: auto;
+}
+
+.content .hero-button button {
+  transition: 3s;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 50px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+.social a {
+  justify-content: center;
+  text-align: center;
+  transition: 3s;
+}
+}
+@media screen and (max-width: 767px) {
+
+  body {
+    transition: 3s;
+  }
+  @keyframes change-bg {
+    from {background-color: hsl(257, 40%, 49%);}
+    to {background-color: rgb(0, 0, 0);}
+  }
+
+  .content p{
+    margin: 5px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (min-width: 375px) {
+
 }
